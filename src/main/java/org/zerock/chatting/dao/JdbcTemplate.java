@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 @Log4j2
-abstract class JdbcTemplate {
+abstract class JdbcTemplate {//밖에서 바라볼 필요없음 public 삭제
 
     static{
         try {
@@ -23,14 +23,13 @@ abstract class JdbcTemplate {
     protected ResultSet resultSet;
 
 
-    public void makeAll(){
+    public void makeAll() throws RuntimeException {//로그 발생하면 timeDAO에 던져줘야한다.
         try {
             makeConnection();
             execute();
-
-
         }catch(Exception e){
-
+            log.error(e.getMessage());//어떤 문제가 생겼는지 알 수 있도록 log찍는다.
+            throw new RuntimeException(e.getMessage());
         }finally {
             finish();
             log.info("END");
@@ -40,7 +39,7 @@ abstract class JdbcTemplate {
     protected abstract void execute()throws Exception;
 
     private void makeConnection() throws Exception{
-        log.info("connection");
+        log.info("makeConnetcion..........");
         this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bit08dbsolo?serverTimezone=Asia/Seoul","myuser","myuser");
     }
 

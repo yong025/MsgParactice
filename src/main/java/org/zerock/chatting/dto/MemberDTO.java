@@ -7,13 +7,12 @@ import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
 
-@Data//getter setter tostring hashcode 등... import한다.
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class MsgDTO {
+public class MemberDTO {
 
-    private Long mno;
-    private String who,whom,content;
-    private Timestamp regdate,opendate;
+    private String mid,mpw,mname,nickname;
+    private Timestamp joindate,moddate;
 }
