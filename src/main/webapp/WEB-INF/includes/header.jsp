@@ -1,12 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: stell
-  Date: 2021-08-11
-  Time: 오후 4:30
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> <!-- jsp에 jstl 연결하기 위해서 추가 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,17 +31,17 @@
         </div>
     </section>
     <hr class="m-0" />
-<!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Clarence Taylor</span>
-        <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="/assets/img/profile.jpg" alt="..." /></span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/msg/register">Register</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/msg/list">Messge List</a></li>
-        </ul>
-    </div>
-</nav>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Clarence Taylor</span>
+            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="/assets/img/kukiki.jpg" alt="..." /></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/msg/register">Register</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/msg/list">Message List</a></li>
+            </ul>
+        </div>
+    </nav>
